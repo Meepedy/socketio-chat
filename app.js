@@ -25,7 +25,7 @@ function createMessageHTML (message) {
     return `
         <div class="message ${message.type === messageTypes.LEFT ? 'message-left' : 'message-right'}">
             <div id="message-details" class="flex">
-            <p class="message-author">${message.author === messageTypes.RIGHT ? '' : message.author}</p>
+            <p class="message-author">${message.type === messageTypes.RIGHT ? '' : message.author}</p>
             <p class="message-date">${message.date}</p>
             </div>
             <p class="message-content">${message.content}</p>
@@ -62,4 +62,23 @@ loginBtn.addEventListener('click', e => {
     chatWindow.classList.remove('hidden');
     displayMessages();
 
+    messageInput.value = '';
+
+});
+
+sendBtn.addEventListener('click', e => {
+    e.preventDefault();
+    if (!messageInput.value){
+        return console.log('Must supply message');
+    }
+
+    const message = {
+        author: username,
+        date: new Date(),
+        content: messageInput.value,
+        type: messageTypes.RIGHT
+    }
+
+    messages.push(message);
+    displayMessages();
 });
