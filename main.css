@@ -87,6 +87,7 @@ header {
 
 header .container {
   height: 100%;
+  align-items: flex-start;
 }
 
 #appContainer {
