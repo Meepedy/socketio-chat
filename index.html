@@ -31,10 +31,25 @@
 
       <section id="chat">
         <div id="messagesList">
-          <div class="message message-right"></div>
-          <div class="message message-left"></div>
+          <div class="message message-right">
+            <div id="message-details">
+              <p class="message-author">David Becker</p>
+              <p class="message-date">5/14/2018</p>
+            </div>
+          </div>
+          <div class="message message-left">
+            <div id="message-details">
+              <p class="message-author"></p>
+              <p class="message-date">5/14/2018</p>
+            </div>
+          </div>
+          <p class="secondary-text text-center">David Becker joined the chat...</p>
         </div>
-        <form id="messageForm"></form>
+        <form id="messageForm">
+          <input type="text" name="message" id="messageInput" placeholder="enter a message">
+          <button>Send</button>
+        </form>
+
       </section>
     </div>
   </div>
