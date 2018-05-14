@@ -62,7 +62,7 @@ loginBtn.addEventListener('click', e => {
     chatWindow.classList.remove('hidden');
     displayMessages();
 
-    messageInput.value = '';
+
 
 });
 
@@ -81,4 +81,6 @@ sendBtn.addEventListener('click', e => {
 
     messages.push(message);
     displayMessages();
+
+    messageInput.value = '';
 });
