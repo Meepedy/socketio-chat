@@ -13,6 +13,16 @@ app.get('/', (req, res) => {
 
 io.on('connection', socket => {
     console.log('a user connected');
+
+    socket.on('disconnect', () => {
+        console.log('a user disconnected');
+    });
+
+    socket.on('message', (message) => {
+        console.log('message: ' + message);
+        //broadcast message to everyone
+        io.emit('message', message);
+    });
 });
 
 app.listen(3000, () => {
