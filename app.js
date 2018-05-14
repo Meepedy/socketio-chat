@@ -16,3 +16,19 @@ const loginBtn = document.getElementById('loginBtn');
 const loginWindow = document.getElementById('login');
 
 const messages = []; // {author, date, content, type}
+
+//take in message object, and return corresponding message HTML
+function createMessageHTML (message) {
+    if(message.type === message.messageTypes.LOGIN) {
+        return `<p class="secondary-text text-center mb-2">${message.author} joined the chat...</p>`;
+    }
+    return `
+        <div class="message ${message.type === messageTypes.LEFT ? 'message-left' : 'message-right'}">
+            <div id="message-details" class="flex">
+            <p class="message-author">${message.author === messageTypes.RIGHT ? '' : message.author}</p>
+            <p class="message-date">${message.date}</p>
+            </div>
+            <p class="message-content">${message.content}</p>
+        </div>
+    `;
+}
