@@ -8,3 +8,43 @@
   --secondary-text: #757575;
   --light-gray: #bdbdbd;
 }
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  color: var(--primary-text);
+}
+
+/* Helper Classes */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
