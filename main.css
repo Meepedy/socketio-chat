@@ -49,6 +49,11 @@ body {
   margin-bottom: 20px;
 }
 
+.container {
+  max-width: 600px;
+  margin: 0px auto;
+}
+
 /* Text Classes */
 
 .primary-text {
