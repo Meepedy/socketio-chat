@@ -32,3 +32,13 @@ function createMessageHTML (message) {
         </div>
     `;
 }
+
+function displayMessages () {
+    //TODO this doesn't seen efficient 
+    const messagesHTML = messages
+        .map ((message) => createMessageHTML(message))
+        .join('');
+    messagesList.innerHTML = messageHTML;
+}
+
+displayMessages();
