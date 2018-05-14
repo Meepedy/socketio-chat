@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/Meepedy/socketio-chat/issues"
   },
-  "homepage": "https://github.com/Meepedy/socketio-chat#readme"
+  "homepage": "https://github.com/Meepedy/socketio-chat#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.0"
+  }
 }
