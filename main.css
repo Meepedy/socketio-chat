@@ -76,3 +76,15 @@ h1 {
   font-size: 48px;
   font-weight: 300;
 }
+
+/* Header */
+header {
+  height: 150px;
+  background-color: var(--dark-blue);
+  width: 100%;
+  color: white;
+}
+
+header .container {
+  height: 100%;
+}
