@@ -19,6 +19,22 @@ const messages = []; // {author, date, content, type}
 
 var socket = io();
 
+socket.on('message', message => {
+    console.log(message);
+    if(message.type !== messageTypes.LOGIN) {
+        if(message.author === username) {
+            message.type = messageTypes.RIGHT;
+        }
+        else {
+            message.type = messageTypes.LEFT;
+        }
+    }
+
+    messages.push(message);
+    displayMessages();
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+});
+
 //take in message object, and return corresponding message HTML
 function createMessageHTML (message) {
     if(message.type === messageTypes.LOGIN) {
@@ -55,18 +71,18 @@ loginBtn.addEventListener('click', e => {
     username = usernameInput.value;
     console.log(username);
 
-    messages.push({
-        author:username,
+    sendMessage({
+        author: username,
         type: messageTypes.LOGIN
     });
 
     loginWindow.classList.add('hidden');
     chatWindow.classList.remove('hidden');
-    displayMessages();
-
-
-
 });
+
+function sendMessage(message) {
+    socket.emit('message', message);
+}
 
 sendBtn.addEventListener('click', e => {
     e.preventDefault();
@@ -74,17 +90,18 @@ sendBtn.addEventListener('click', e => {
         return console.log('Must supply message');
     }
 
+    const date = new Date();
+    const day = date.getDay();
+    const year = date.getFullYear();
+    const month = ('0' + (date.getMonth() + 4)).slice(-2);
+    const dateString = `${month}/${day}/${year}`;
     const message = {
         author: username,
-        date: new Date(),
+        date: dateString,
         content: messageInput.value,
-        type: messageTypes.RIGHT
     }
-
-    messages.push(message);
-    displayMessages();
 
     messageInput.value = '';
 
-    chatWindow.scrollTop = chatWindow.scrollHeight;
+    sendMessage(message);
 });
