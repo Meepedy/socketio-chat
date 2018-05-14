@@ -131,3 +131,44 @@ button {
   color: white;
   border: none;
 }
+
+/* Chat Section */
+
+#chat {
+  background: white;
+  margin: 25px 0;
+  padding: 25px;
+  color: white;
+  overflow-y: scroll;
+}
+
+.message {
+  background-color: var(--primary-blue);
+  padding: 20px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.message-right {
+  background-color: var(--light-blue);
+  color: var(--primary-text);
+  margin-left: 20%
+}
+
+#message-details {
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+
+.message-author {
+  font-weight: 800;
+}
+
+.message-date {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.message-content {
+  font-weight: 100;
+}

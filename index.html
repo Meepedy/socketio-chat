@@ -29,23 +29,25 @@
         </form>
       </section>
 
-      <section id="chat">
-        <div id="messagesList">
+      <section id="chat" class="flex-grow-1 flex-column">
+        <div id="messagesList" class="flex-grow-1">
           <div class="message message-left">
-            <div id="message-details">
+            <div id="message-details" class="flex">
               <p class="message-author">David Becker</p>
               <p class="message-date">5/14/2018</p>
             </div>
+            <p class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
           <div class="message message-right">
-            <div id="message-details">
+            <div id="message-details" class="flex">
               <p class="message-author"></p>
               <p class="message-date">5/14/2018</p>
             </div>
+            <p class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <p class="secondary-text text-center">David Becker joined the chat...</p>
+          <p class="secondary-text text-center mb-2">David Becker joined the chat...</p>
         </div>
-        <form id="messageForm" class="flex">
+        <form id="messageForm" class="flex mb-2">
           <input type="text" name="message" class="flex-grow-1" id="messageInput" placeholder="enter a message">
           <button>Send</button>
         </form>
