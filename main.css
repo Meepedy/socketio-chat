@@ -105,6 +105,10 @@ header .container {
   margin-top: -100px;
 }
 
+#loginForm {
+  margin-top: 20px;
+}
+
 /* Form Elements */
 
 input {
