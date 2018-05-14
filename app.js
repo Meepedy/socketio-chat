@@ -33,6 +33,7 @@ function createMessageHTML (message) {
     `;
 }
 
+//calls createMessageHTML and renders generated HTML
 function displayMessages () {
     //TODO this doesn't seen efficient 
     const messagesHTML = messages
