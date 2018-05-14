@@ -19,7 +19,7 @@ const messages = []; // {author, date, content, type}
 
 //take in message object, and return corresponding message HTML
 function createMessageHTML (message) {
-    if(message.type === message.messageTypes.LOGIN) {
+    if(message.type === messageTypes.LOGIN) {
         return `<p class="secondary-text text-center mb-2">${message.author} joined the chat...</p>`;
     }
     return `
@@ -39,7 +39,7 @@ function displayMessages () {
     const messagesHTML = messages
         .map ((message) => createMessageHTML(message))
         .join('');
-    messagesList.innerHTML = messageHTML;
+    messagesList.innerHTML = messagesHTML;
 }
 
 displayMessages();
