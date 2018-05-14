@@ -104,3 +104,21 @@ header .container {
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   margin-top: -100px;
 }
+
+/* Form Elements */
+
+input {
+  height: 40px;
+  padding: 10px;
+  background: var(--light-blue);
+  border: none;
+  color: var(--secondary-text);
+}
+
+button {
+  height: 40px;
+  padding: 0 15px;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+}
