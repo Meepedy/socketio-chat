@@ -96,6 +96,11 @@ header .container {
   background-color: var(--primary-blue);
 }
 
+#mainContent {
+  justify-content: center;
+  width: 100%;
+}
+
 /* Login Form */
 
 #login {
