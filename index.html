@@ -20,11 +20,11 @@
       </div>
     </header>
 
-    <div id="mainContent">
+    <div id="mainContent" class="container flex-grow-1 flex-column flex-center">
       <section id="login">
-        <h2>Login</h2>
-        <form action="" id="loginForm">
-          <input type="text" name="username" id="usernameInput" placeholder="username">
+        <h2 class="text-center">Login</h2>
+        <form action="" id="loginForm" class="flex">
+          <input type="text" name="username" class="flex-grow-1" id="usernameInput" placeholder="username">
           <button id="loginBtn">Chat</button>
         </form>
       </section>
@@ -45,8 +45,8 @@
           </div>
           <p class="secondary-text text-center">David Becker joined the chat...</p>
         </div>
-        <form id="messageForm">
-          <input type="text" name="message" id="messageInput" placeholder="enter a message">
+        <form id="messageForm" class="flex">
+          <input type="text" name="message" class="flex-grow-1" id="messageInput" placeholder="enter a message">
           <button>Send</button>
         </form>
 
