@@ -83,4 +83,6 @@ sendBtn.addEventListener('click', e => {
     displayMessages();
 
     messageInput.value = '';
+
+    chatWindow.scrollTop = chatWindow.scrollHeight;
 });
