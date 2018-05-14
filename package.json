@@ -1,0 +1,27 @@
+{
+  "name": "socketio-chat",
+  "version": "1.0.0",
+  "description": "a simple chat app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meepedy/socketio-chat.git"
+  },
+  "keywords": [
+    "chat",
+    "socketio",
+    "node",
+    "js",
+    "html",
+    "css"
+  ],
+  "author": "David Becker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meepedy/socketio-chat/issues"
+  },
+  "homepage": "https://github.com/Meepedy/socketio-chat#readme"
+}
