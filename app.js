@@ -43,3 +43,23 @@ function displayMessages () {
 }
 
 displayMessages();
+
+//loginbtn callback
+loginBtn.addEventListener('click', e => {
+    e.preventDefault();
+    if(!usernameInput.value) {
+        return console.log('Must supply a username');
+    }
+    username = usernameInput.value;
+    console.log(username);
+
+    messages.push({
+        author:username,
+        type: messageTypes.LOGIN
+    });
+
+    loginWindow.classList.add('hidden');
+    chatWindow.classList.remove('hidden');
+    displayMessages();
+
+});
