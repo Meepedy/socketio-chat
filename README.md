@@ -1,2 +1,2 @@
 # socketio-chat
-a simple chat app using socketio
+a simple chat app using socket.io
